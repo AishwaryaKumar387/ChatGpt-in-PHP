@@ -1,13 +1,17 @@
 <?php
 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 $dTemperature = 0.6;
-$iMaxTokens = 150;
+$iMaxTokens = 2000;
 $top_p = 1;
 $frequency_penalty = 0.5;
 $presence_penalty = 0.5;
-$OPENAI_API_KEY = "YOUR_OPENAI_API_KEY";
+$OPENAI_API_KEY =  $OPENAI_API_KEY;
 $sModel = "text-davinci-003";
-$prompt = "What is aeroplane";
+$prompt = "Tell me easy caption for hospital service post";
 $ch = curl_init();
 $headers  = [
     'Accept: application/json',
@@ -34,7 +38,6 @@ curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($postData));
 
 $result = curl_exec($ch);
 $decoded_json = json_decode($result, true);
-
 print_r($decoded_json['choices'][0]['text']);
 
 ?>
