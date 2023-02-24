@@ -5,19 +5,13 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 $dTemperature = 0.6;
-$iMaxTokens = 2000;
+$iMaxTokens = 150;
 $top_p = 1;
 $frequency_penalty = 0.5;
 $presence_penalty = 0.5;
-<<<<<<< HEAD
-$OPENAI_API_KEY =  $OPENAI_API_KEY;
-$sModel = "text-davinci-003";
-$prompt = "Tell me easy caption for hospital service post";
-=======
 $OPENAI_API_KEY = $OPENAI_API_KEY;
 $sModel = "text-davinci-003";
 $prompt = "Where is Mohali";
->>>>>>> 48bb3ecb8d0bc7cdb4fb0c2e1a9c85aab1480e28
 $ch = curl_init();
 $headers  = [
     'Accept: application/json',
