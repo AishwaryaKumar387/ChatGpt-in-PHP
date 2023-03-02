@@ -4,7 +4,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 // Load constants from a separate configuration file or environment variables
-$OPENAI_API_KEY ='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';
+$OPENAI_API_KEY ='PUT_YOUR_KEY_HERE';
 $dTemperature = 0.6;
 $iMaxTokens = 150;
 $top_p = 1;
