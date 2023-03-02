@@ -3,7 +3,7 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-// Load constants from a separate configuration file or environment variables
+// Get OPEN AI API KEY from https://platform.openai.com/account/api-keys
 $OPENAI_API_KEY ='PUT_YOUR_KEY_HERE';
 $dTemperature = 0.6;
 $iMaxTokens = 150;
