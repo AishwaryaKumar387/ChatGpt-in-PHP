@@ -40,6 +40,11 @@ For example, if the chatbot generated the following text: "Hello, how can I assi
 ### sModel
 - In the code you provided, sModel refers to the name or identifier of the OpenAI GPT-based language model that is being used for the text generation. Specifically, in this case, the sModel variable is set to "text-davinci-003", which is the identifier for the OpenAI's GPT-3 language model called "Davinci" with a certain size and configuration.
 
+### seed
+-The 'seed' parameter is used to set the random seed for the GPT model. The seed value is an integer, and if the same seed value is used across different requests, the output of the GPT model should be deterministic.
+
+In the context of OpenAI's GPT models, the random seed is used to initialize the internal state of the model's random number generator. By setting the same seed value across different requests, you can ensure that the model's internal state is identical, which should result in deterministic output.
 The choice of the language model can have a significant impact on the quality and style of the generated text, as different models may have different strengths and weaknesses depending on the training data and architecture. In this example, the "text-davinci-003" model is one of the most advanced and capable models offered by OpenAI, with a large number of parameters and pre-training on a diverse range of text data.
 
 Note that in order to use the OpenAI API and access the "text-davinci-003" model, you would need to provide a valid OPENAI_API_KEY as well.
+Note : To get deterministic result, means not want different result on every hit, use code of chat-gpt-fixed-seeder.php
